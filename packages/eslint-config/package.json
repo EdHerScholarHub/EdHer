@@ -2,10 +2,6 @@
   "name": "@repo/eslint-config",
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "lint": "eslint",
-    "fix": "eslint --fix"
-  },
   "private": true,
   "exports": {
     "./config": "./config.ts"
