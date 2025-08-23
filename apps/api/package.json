@@ -1,0 +1,17 @@
+{
+  "name": "@repo/api",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts --port 8080",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "dependencies": {
+    "hono": "^4.9.4",
+    "@repo/dao": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "workspace:*"
+  }
+}

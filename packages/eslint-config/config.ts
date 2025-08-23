@@ -1,0 +1,61 @@
+import antfu from "@antfu/eslint-config";
+
+export const baseEsLintConfig = antfu(
+  {
+    type: "app",
+    react: true,
+    typescript: true,
+    formatters: true,
+    yaml: true,
+    stylistic: {
+      semi: true,
+      quotes: "double",
+    },
+    ignores: [
+      ".husky",
+      ".github",
+      ".idea",
+      "package.json",
+      "drizzle",
+      "routeTree.gen.ts",
+    ],
+  },
+  {
+    rules: {
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          args: "all",
+          argsIgnorePattern: "^_",
+          caughtErrors: "all",
+          caughtErrorsIgnorePattern: "^_",
+          destructuredArrayIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          ignoreRestSiblings: true,
+        },
+      ],
+      "ts/no-redeclare": "off",
+      "ts/consistent-type-definitions": ["error", "type"],
+      "no-console": ["warn"],
+      "antfu/no-top-level-await": ["off"],
+      "antfu/top-level-function": ["off"],
+      "node/prefer-global/process": ["off"],
+      "style/jsx-one-expression-per-line": ["off"],
+      "style/jsx-curly-brace-presence": ["off"],
+      "perfectionist/sort-imports": [
+        "error",
+        {
+          tsconfigRootDir: ".",
+        },
+      ],
+      "unicorn/filename-case": [
+        "error",
+        {
+          case: "kebabCase",
+          ignore: ["README.md"],
+        },
+      ],
+      "eslint-comments/no-unlimited-disable": "warn",
+    },
+  },
+);
