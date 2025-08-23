@@ -8,7 +8,7 @@
     "lint:fix": "turbo run lint:fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "devDependencies": {
     "husky": "^9.1.7",
@@ -22,6 +22,6 @@
     "node": ">=18"
   },
   "lint-staged": {
-    "*": "pnpm run lint:fix"
+    "*": "pnpm run lint"
   }
 }
