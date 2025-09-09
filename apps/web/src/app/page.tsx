@@ -1,10 +1,5 @@
-import { Button } from "@repo/ui/components/button";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <div>
-      <h1 className={"font-bold text-green-500 text-5xl"}>hello</h1>
-      <Button>Super</Button>
-    </div>
-  );
+export default function RootPage() {
+  redirect("/en");
 }

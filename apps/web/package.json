@@ -7,11 +7,12 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "lint:fix" : "eslint --fix"
+    "lint:fix": "eslint --fix"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
     "next": "15.5.0",
+    "next-intl": "^4.3.7",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
