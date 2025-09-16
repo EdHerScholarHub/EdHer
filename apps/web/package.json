@@ -10,6 +10,7 @@
     "lint:fix": "eslint --fix"
   },
   "dependencies": {
+    "@next/third-parties": "^15.5.3",
     "@repo/ui": "workspace:*",
     "next": "15.5.0",
     "next-intl": "^4.3.7",
