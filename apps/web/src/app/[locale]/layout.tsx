@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -30,6 +31,9 @@ export default async function LocalLayout({
         <NextIntlClientProvider locale={locale}>
           {children}
         </NextIntlClientProvider>
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
       </body>
     </html>
   );
