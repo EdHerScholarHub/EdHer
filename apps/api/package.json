@@ -8,6 +8,10 @@
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio"
   },
+  "exports": {
+    "./db": "./src/db/database.ts",
+    "./schemas": "./src/db/schema.ts"
+  },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.1",
     "@repo/dao": "workspace:*",
