@@ -22,7 +22,7 @@ const LocaleSelect = () => {
   };
   return (
     <Select onValueChange={langChange} value={locale}>
-      <SelectTrigger className={"p-3 bg-[#3e5179] text-white font-semibold"}>
+      <SelectTrigger className={"p-3 bg-navy text-white font-semibold"}>
         {/* <Image */}
         {/*  src={`/icons/${locale}-flag.png`} */}
         {/*  alt={`${locale} flag icon`} */}

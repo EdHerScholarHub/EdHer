@@ -115,6 +115,14 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+    /* client UI css variables */
+  --color-navy: oklch(32.886% 0.10493 263.347);
+  --color-muted-navy: oklch(43.746% 0.07067 264.293);
+  --color-papaya: oklch(81.144% 0.15085 69.718);
+  --color-silver: oklch(97.135% 0.00611 75.133);
+  --font-poppins: var(--font-poppins);
+  --font-archivo: var(--font-archivo);
 }
 
 @layer base {
@@ -122,6 +130,9 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-poppins;
+  }
+  .header {
+    @apply text-navy text-2xl md:text-3xl mt-6 font-bold mb-4 font-archivo;
   }
 }
