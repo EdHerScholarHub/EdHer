@@ -1,5 +1,3 @@
-// eslint-disable-next-line ts/ban-ts-comment
-// @ts-nocheck
 "use client";
 
 import * as SheetPrimitive from "@radix-ui/react-dialog";
