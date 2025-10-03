@@ -8,7 +8,7 @@ export default function Filters() {
         <input type="search" name="search" id="search" placeholder="Search by name" className="peer border-2 w-full border-muted-navy/30 p-4 rounded-xl placeholder:text-muted-navy/80" />
         <Search className="absolute top-1/2 -translate-y-1/2 right-4 peer-focus-within:hidden" />
       </label>
-      <button type="button" className="border-2 border-muted-navy/30 p-4 rounded-xl md:hidden text-navy">
+      <button type="button" aria-label="filter" className="border-2 border-muted-navy/30 p-4 rounded-xl md:hidden text-navy">
         <Filter />
       </button>
 

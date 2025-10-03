@@ -116,7 +116,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-    /* client UI css variables */
+  /* client UI css variables */
   --color-navy: oklch(32.886% 0.10493 263.347);
   --color-muted-navy: oklch(43.746% 0.07067 264.293);
   --color-papaya: oklch(81.144% 0.15085 69.718);

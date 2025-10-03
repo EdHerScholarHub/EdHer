@@ -26,11 +26,11 @@ export default function DesktopNav() {
             menu.subMenu
               ? (
                   <NavigationMenuItem key={menu.text}>
-                    <NavigationMenuTrigger className={`hover:!bg-transparent focus-within:!bg-transparent data-[state=open]:!bg-transparent ${route.includes(menu.text.toLowerCase()) ? "!text-silver" : "!text-silver/60 hover:!text-silver"}`}>
+                    <NavigationMenuTrigger className={`hover:!bg-transparent focus-within:!bg-transparent data-[state=open]:!bg-transparent data-[state=open]:!text-silver ${route.includes(menu.text.toLowerCase()) ? "!text-silver" : "!text-silver/60 hover:!text-silver"}`}>
                       {menu.text}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="!bg-silver">
-                      <ul className="grid w-max gap-4">
+                      <ul className="grid w-max gap-1">
                         {
                           menu.subMenu.map(subMenu => (
                             <li key={subMenu.text}>

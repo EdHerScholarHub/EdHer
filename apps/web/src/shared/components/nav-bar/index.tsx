@@ -14,7 +14,7 @@ export default function NavBar() {
           </Link>
         </div>
 
-        <div className="">
+        <div>
           <div className="lg:hidden">
             <MobileNav />
           </div>

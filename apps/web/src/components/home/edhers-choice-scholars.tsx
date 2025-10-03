@@ -7,7 +7,7 @@ export default function EdhersChoiceScholars() {
     {
       id: 0,
       img: "/assets/post5.png",
-      title: "Chevening Scholarship - UK",
+      title: "Enviromental Program",
       by: "UK Government",
       date: "15 Nov 2025",
       tags: ["Fully Funded", "Bachelor", "Business", "Online"],
@@ -16,7 +16,7 @@ export default function EdhersChoiceScholars() {
     {
       id: 1,
       img: "/assets/post6.png",
-      title: "Fulbright Scholarship",
+      title: "Human Psychology",
       by: "USA Government",
       date: "15 Oct 2025",
       tags: ["Fully Funded", "Bachelor", "Business", "Online"],
@@ -25,7 +25,7 @@ export default function EdhersChoiceScholars() {
     {
       id: 2,
       img: "/assets/post7.png",
-      title: "Fulbright Scholarship",
+      title: "AI",
       by: "USA Government",
       date: "15 Oct 2025",
       tags: ["Fully Funded", "Bachelor", "Business", "Online"],
@@ -34,7 +34,7 @@ export default function EdhersChoiceScholars() {
     {
       id: 3,
       img: "/assets/post8.png",
-      title: "Fulbright Scholarship",
+      title: "Australia Awards Sccholarship",
       by: "USA Government",
       date: "15 Oct 2025",
       tags: ["Fully Funded", "Bachelor", "Business", "Online"],

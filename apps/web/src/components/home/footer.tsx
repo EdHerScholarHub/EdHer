@@ -46,10 +46,10 @@ export default function Footer() {
             footerLinks.map(links => (
               <div key={Object.keys(links)[0]}>
                 <h2 className="text-xl font-bold mb-4 lg:mb-6">{Object.keys(links)[0]}</h2>
-                <ul className="">
+                <ul>
                   {
                     Object.values(links)[0]!.map(link => (
-                      <li className="leading-6 md:leading-7" key={link.text}>
+                      <li className="leading-8 md:leading-7" key={link.text}>
                         <Link href={link.link} className="text-silver/80 text-sm hover:underline hover:text-silver transition">{link.text}</Link>
                       </li>
                     ))
