@@ -1,17 +1,8 @@
-import type { StaticImport } from "next/dist/shared/lib/get-img-props";
-
 import Image from "next/image";
-import Link from "next/link";
 
-export type TScholar = {
-  img: string | StaticImport;
-  id: number;
-  title: string;
-  by: string;
-  date: string;
-  tags: string[];
-  link: string;
-};
+import type { TScholar } from "../../constants/popular-scholars";
+
+import { Link } from "../../i18n/navigation";
 
 export default function Post({ title, by, date, tags, link, img }: TScholar) {
   return (

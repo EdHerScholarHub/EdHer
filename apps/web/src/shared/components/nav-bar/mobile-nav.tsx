@@ -12,11 +12,11 @@ import {
   SheetTrigger,
 } from "@repo/ui/components/sheet";
 import { ChevronDown, MenuIcon } from "lucide-react";
-import Link from "next/link";
 
+import { NAVMENULINKS } from "../../../constants";
+import { Link } from "../../../i18n/navigation";
 import EdHer from "../edher";
 import LocaleSelect from "../locale-select";
-import { navMenuLinks } from "./nav-menu-links";
 
 export default function MobileNav() {
   return (
@@ -35,7 +35,7 @@ export default function MobileNav() {
 
         <div className="space-y-6 px-4 overflow-y-auto">
           {
-            navMenuLinks.map(menu => (
+            NAVMENULINKS.map(menu => (
               menu.subMenu
                 ? (
                     <div key={menu.text} className="w-full text-center">
@@ -63,7 +63,7 @@ export default function MobileNav() {
                   )
             ))
           }
-          <div className="w-full *:mx-auto">
+          <div className="w-full *:mx-auto bg-muted-navy">
             <LocaleSelect />
           </div>
 

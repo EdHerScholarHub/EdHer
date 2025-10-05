@@ -9,11 +9,11 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@repo/ui/components/navigation-menu";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { NAVMENULINKS } from "../../../constants";
+import { Link } from "../../../i18n/navigation";
 import LocaleSelect from "../locale-select";
-import { navMenuLinks } from "./nav-menu-links";
 
 export default function DesktopNav() {
   const route = usePathname();
@@ -22,7 +22,7 @@ export default function DesktopNav() {
       <NavigationMenuList className="[&_button]:text-silver [&_button]:bg-navy [&_svg]:size-5">
 
         {
-          navMenuLinks.map(menu => (
+          NAVMENULINKS.map(menu => (
             menu.subMenu
               ? (
                   <NavigationMenuItem key={menu.text}>

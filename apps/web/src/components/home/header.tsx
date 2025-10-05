@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "../../i18n/navigation";
 
 export default function Header({ header, desc, link }: { header: string; desc: string; link: string }) {
   return (
