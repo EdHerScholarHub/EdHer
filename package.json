@@ -8,7 +8,8 @@
     "lint:fix": "turbo run lint:fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "web": "cd apps/web && pnpm run dev"
   },
   "devDependencies": {
     "husky": "^9.1.7",

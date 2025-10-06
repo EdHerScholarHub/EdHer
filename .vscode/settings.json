@@ -3,5 +3,13 @@
     {
       "mode": "auto"
     }
-  ]
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.fixAll.ts": "always",
+    "source.removeUnusedImports": "always",
+    "source.sortImports": "always",
+    "source.addMissingImports.ts": "always",
+  },
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }
