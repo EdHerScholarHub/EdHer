@@ -42,16 +42,14 @@ const SearchForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className={
-          "flex items-center justify-between gap-4 md:flex-wrap md:justify-center  lg:flex-nowrap lg:gap-6"
-        }
+        className={"grid grid-cols-7 gap-6 "}
       >
         {/* Scholarship name field */}
         <FormField
           control={form.control}
           name={"name"}
           render={({ field }) => (
-            <FormItem>
+            <FormItem className={"col-span-3"}>
               <FormLabel className={"sr-only"}>Scholarship name</FormLabel>
               <FormControl>
                 <div className={"relative"}>
@@ -75,7 +73,7 @@ const SearchForm = () => {
           control={form.control}
           name={"studyLevel"}
           render={({ field }) => (
-            <FormItem className={"flex-1 md:max-w-[220px] lg:max-w-[unset]"}>
+            <FormItem className={"col-span-2"}>
               <FormLabel className={"sr-only"}>Study Level</FormLabel>
               <FormControl>
                 <StudyLevelFilter
@@ -93,7 +91,7 @@ const SearchForm = () => {
           control={form.control}
           name={"countryOfStudy"}
           render={({ field }) => (
-            <FormItem className={"flex-1 md:max-w-[220px] lg:max-w-[unset]"}>
+            <FormItem className={"col-span-2"}>
               <FormLabel className={"sr-only"}>Country of Study</FormLabel>
               <FormControl>
                 <StudyCountryFilter
@@ -111,7 +109,7 @@ const SearchForm = () => {
           control={form.control}
           name={"fieldOfStudy"}
           render={({ field }) => (
-            <FormItem className={"flex-1 md:max-w-[220px] lg:max-w-[unset]"}>
+            <FormItem className={"col-span-2 md:col-start-3 "}>
               <FormLabel className={"sr-only"}>Field of Study</FormLabel>
               <FormControl>
                 <StudyFieldFilter
@@ -127,7 +125,7 @@ const SearchForm = () => {
         <button
           type="submit"
           className={
-            "w-[148px] h-[56px] p-4 bg-navy text-white flex justify-center items-center rounded-sm text-md font-medium cursor-pointer disabled:bg-navy/80 disabled:cursor-not-allowed"
+            " w-[148px] lg:w-full h-[56px] p-4 bg-navy text-white flex justify-center items-center rounded-sm text-md font-medium cursor-pointer disabled:bg-navy/80 disabled:cursor-not-allowed"
           }
           disabled={!form.formState.isValid}
         >
