@@ -18,7 +18,7 @@ export const baseEsLintConfig = antfu(
       "package.json",
       "drizzle",
       "routeTree.gen.ts",
-      "en.d.json.ts",
+      "*.json.ts",
     ],
   },
   {

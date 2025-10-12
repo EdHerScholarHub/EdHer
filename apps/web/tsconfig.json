@@ -15,8 +15,7 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "./messages/en.d.json.ts"
+    "node_modules"
   ],
   "paths": {
     "@web/*": ["./src/*"]
