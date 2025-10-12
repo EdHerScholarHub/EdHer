@@ -22,9 +22,9 @@ export const footerLinks: Array<Record<string, Array<TFooterLink>>> = [
   // },
   {
     "About Us": [
-      { text: "Contact Us", link: "#" },
-      { text: "FAQ", link: "#" },
-      { text: "Privacy / Policy", link: "#" },
+      { text: "Mission", link: "#" },
+      { text: "Team", link: "#" },
+      { text: "Partners", link: "#" },
     ],
   },
   {

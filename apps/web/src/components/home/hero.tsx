@@ -25,7 +25,7 @@ export default function Hero() {
               <span>Explore Scholarships</span>
             </button>
             <button
-              className="bg-papaya hover:brightness-110 active:brightness-110 transition cursor-pointer w-max md:text-lg px-4 py-4 lg:py-3 flex items-center gap-x-2 text-navy rounded-sm font-medium"
+              className=" bg-transparent border-[1px] border-papaya hover:bg-papaya/70 hover:border-transparent hover:text-navy/90 transition cursor-pointer w-max md:text-lg px-4 py-4 lg:py-3 flex items-center gap-x-2 text-white rounded-sm font-medium duration-500"
               type="button"
               role="button"
             >
