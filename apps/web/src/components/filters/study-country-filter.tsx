@@ -7,12 +7,32 @@ import {
   SelectValue,
 } from "@repo/ui/components/select";
 
+import AccordionSelect from "./accordion-select";
+
 type StudyCountryFilterProps = {
+  mode?: "accordion" | "select";
   value: string | undefined;
   onChange: (value: string | undefined) => void;
 };
 
-const StudyCountryFilter = ({ value, onChange }: StudyCountryFilterProps) => {
+// Later this will be replaced with dynamic data from database
+const dummyData = ["Country 1", "Country 2", "Country 3", "Country 4"];
+
+const StudyCountryFilter = ({
+  mode = "select",
+  value,
+  onChange,
+}: StudyCountryFilterProps) => {
+  if (mode === "accordion") {
+    return (
+      <AccordionSelect
+        data={dummyData}
+        title={"Country of Study"}
+        onChange={onChange}
+        value={value}
+      />
+    );
+  }
   return (
     <Select value={value} onValueChange={onChange}>
       <SelectTrigger className="w-full  p-7 border-2 border-muted-navy/30 *:text-navy/60 *:font-medium">

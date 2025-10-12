@@ -11,30 +11,14 @@ import {
 import { Search } from "lucide-react";
 import { useForm } from "react-hook-form";
 
-import type {
-  FTSearchFormSchema,
-} from "../../validators/form-validators";
+import type { FTSearchFormSchema } from "../../validators/form-validators";
 
 import { redirect } from "../../i18n/navigation";
-import {
-  SearchFormSchema,
-} from "../../validators/form-validators";
+import { extractValidSearchParams } from "../../util/util";
+import { SearchFormSchema } from "../../validators/form-validators";
 import StudyCountryFilter from "./study-country-filter";
 import StudyFieldFilter from "./study-field-filter";
 import StudyLevelFilter from "./study-level-filter";
-
-const extractValidSearchParams = (input: FTSearchFormSchema) => {
-  return Object.entries(input)
-    .reduce((acc, curr) => {
-      const [key, value] = curr;
-      console.log(acc, curr);
-      if (value) {
-        return [...acc, `${key}=${value}`];
-      }
-      return acc;
-    }, [] as string[])
-    .join("&");
-};
 
 const SearchForm = () => {
   const form = useForm<FTSearchFormSchema>({
@@ -141,6 +125,7 @@ const SearchForm = () => {
         />
 
         <button
+          type="submit"
           className={
             "w-[148px] h-[56px] p-4 bg-navy text-white flex justify-center items-center rounded-sm text-md font-medium cursor-pointer disabled:bg-navy/80 disabled:cursor-not-allowed"
           }

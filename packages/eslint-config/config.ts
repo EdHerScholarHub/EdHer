@@ -18,6 +18,7 @@ export const baseEsLintConfig = antfu(
       "package.json",
       "drizzle",
       "routeTree.gen.ts",
+      "en.d.json.ts",
     ],
   },
   {
@@ -56,6 +57,7 @@ export const baseEsLintConfig = antfu(
         },
       ],
       "eslint-comments/no-unlimited-disable": "warn",
+      "arrow-parens": ["warn"],
     },
   },
 );

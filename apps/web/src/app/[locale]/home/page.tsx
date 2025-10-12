@@ -1,3 +1,4 @@
+import MobileFilter from "../../../components/filters/mobile-search";
 import SearchForm from "../../../components/filters/search-form";
 import Categories from "../../../components/home/categories";
 import EdhersChoiceScholars from "../../../components/home/edhers-choice-scholars";
@@ -12,7 +13,10 @@ export default async function IndexPage() {
       <section className="max-w-[1440px] mx-auto px-4 md:px-6 lg:px-8 flex flex-col gap-20 lg:gap-24 pb-10">
         <section className="">
           <h1 className="header">Search Scholarship</h1>
-          <div className="mt-6 lg:mt-10 ">
+          <div className="mt-6  md:hidden ">
+            <MobileFilter />
+          </div>
+          <div className="mt-6 hidden md:block lg:mt-10">
             <SearchForm />
           </div>
         </section>

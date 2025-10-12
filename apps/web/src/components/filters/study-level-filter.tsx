@@ -7,11 +7,34 @@ import {
   SelectValue,
 } from "@repo/ui/components/select";
 
+import AccordionSelect from "./accordion-select";
+
 type StudyLevelFilterProps = {
   value: string | undefined;
   onChange: (value: string | undefined) => void;
+  mode?: "accordion" | "select";
 };
-const StudyLevelFilter = ({ value, onChange }: StudyLevelFilterProps) => {
+
+// Later this will be replaced with dynamic data from database
+
+const dummyData = ["Level 1", "Level 2", "Level 3", "Level 4"];
+
+const StudyLevelFilter = ({
+  mode = "select",
+  value,
+  onChange,
+}: StudyLevelFilterProps) => {
+  if (mode === "accordion") {
+    return (
+      <AccordionSelect
+        data={dummyData}
+        title={"Study Level"}
+        onChange={onChange}
+        value={value}
+      />
+    );
+  }
+
   return (
     <Select value={value} onValueChange={onChange}>
       <SelectTrigger className="w-full p-7 border-2 border-muted-navy/30 *:text-navy/60 *:font-medium">
