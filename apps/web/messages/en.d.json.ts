@@ -2,8 +2,8 @@
 // See: https://next-intl.dev/docs/workflows/typescript#messages-arguments
 
 declare const messages: {
-  "HomePage": {
-    "Title": "Good Morning"
-  }
+  HomePage: {
+    Title: "Good Morning";
+  };
 };
 export default messages;
