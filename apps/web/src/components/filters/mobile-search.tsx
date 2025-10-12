@@ -49,7 +49,7 @@ const MobileSearch = () => {
             control={form.control}
             name={"name"}
             render={({ field }) => (
-              <FormItem>
+              <FormItem className={"w-full"}>
                 <FormLabel className={"sr-only"}>Scholarship name</FormLabel>
                 <FormControl>
                   <div className={"relative"}>
