@@ -21,15 +21,14 @@ import StudyCountryFilter from "./study-country-filter";
 import StudyFieldFilter from "./study-field-filter";
 import StudyLevelFilter from "./study-level-filter";
 
-const MobileSearch = () => {
+type MobileSearchProps = {
+  defaultValues?: FTSearchFormSchema;
+};
+
+const MobileSearch = ({ defaultValues }: MobileSearchProps) => {
   const form = useForm<FTSearchFormSchema>({
     resolver: zodResolver(SearchFormSchema),
-    defaultValues: {
-      countryOfStudy: undefined,
-      fieldOfStudy: undefined,
-      name: undefined,
-      studyLevel: undefined,
-    },
+    defaultValues: { ...defaultValues },
   });
   const onSubmit = async (values: FTSearchFormSchema) => {
     const params = extractValidSearchParams(values);

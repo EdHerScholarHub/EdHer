@@ -20,15 +20,14 @@ import StudyCountryFilter from "./study-country-filter";
 import StudyFieldFilter from "./study-field-filter";
 import StudyLevelFilter from "./study-level-filter";
 
-const SearchForm = () => {
+type SearchFormProps = {
+  defaultValues?: FTSearchFormSchema;
+};
+
+const SearchForm = ({ defaultValues }: SearchFormProps) => {
   const form = useForm<FTSearchFormSchema>({
     resolver: zodResolver(SearchFormSchema),
-    defaultValues: {
-      countryOfStudy: undefined,
-      fieldOfStudy: undefined,
-      name: undefined,
-      studyLevel: undefined,
-    },
+    defaultValues: { ...defaultValues },
   });
   const onSubmit = async (values: FTSearchFormSchema) => {
     const params = extractValidSearchParams(values);
@@ -56,6 +55,7 @@ const SearchForm = () => {
                   <input
                     type="search"
                     name={field.name}
+                    value={field.value}
                     onChange={field.onChange}
                     placeholder="Search by name"
                     className="peer border-2 w-full border-muted-navy/30 p-4 rounded-xl placeholder:text-muted-navy/80"
