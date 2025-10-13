@@ -42,14 +42,14 @@ const SearchForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className={"grid grid-cols-7 gap-6 "}
+        className={"grid grid-cols-7 gap-6 lg:grid-cols-9 "}
       >
         {/* Scholarship name field */}
         <FormField
           control={form.control}
           name={"name"}
           render={({ field }) => (
-            <FormItem className={"col-span-3"}>
+            <FormItem className={"col-span-3 lg:col-span-2"}>
               <FormLabel className={"sr-only"}>Scholarship name</FormLabel>
               <FormControl>
                 <div className={"relative"}>
@@ -109,7 +109,9 @@ const SearchForm = () => {
           control={form.control}
           name={"fieldOfStudy"}
           render={({ field }) => (
-            <FormItem className={"col-span-2 md:col-start-3 "}>
+            <FormItem
+              className={"col-span-2 md:col-start-3 lg:col-start-[unset] "}
+            >
               <FormLabel className={"sr-only"}>Field of Study</FormLabel>
               <FormControl>
                 <StudyFieldFilter
