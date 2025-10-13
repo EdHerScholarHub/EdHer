@@ -1,9 +1,10 @@
+"use client";
 import { cn } from "@repo/ui/lib/utils";
 
 import { useFilterCountStore } from "../../store/filter-count-store";
 
 const FilterCountBubble = ({ className }: { className?: string }) => {
-  const filterCount = useFilterCountStore(state => state.filterCount);
+  const filterCount = useFilterCountStore((state) => state.filterCount);
   return (
     <div
       className={cn(

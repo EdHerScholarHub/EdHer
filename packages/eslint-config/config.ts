@@ -57,7 +57,8 @@ export const baseEsLintConfig = antfu(
         },
       ],
       "eslint-comments/no-unlimited-disable": "warn",
-      "arrow-parens": ["warn"],
+      "arrow-parens": ["off"],
+      "style/arrow-parens": ["off"],
     },
   },
 );
