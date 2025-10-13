@@ -1,0 +1,1 @@
+ALTER TABLE "scholar_detail" RENAME COLUMN "study_filed" TO "study_level";
