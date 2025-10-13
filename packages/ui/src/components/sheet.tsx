@@ -48,9 +48,11 @@ function SheetContent({
   className,
   children,
   side = "right",
+  headerComponent,
   ...props
 }: React.ComponentProps<typeof SheetPrimitive.Content> & {
   side?: "top" | "right" | "bottom" | "left";
+  headerComponent?: React.ReactNode;
 }) {
   return (
     <SheetPortal>
@@ -71,11 +73,31 @@ function SheetContent({
         )}
         {...props}
       >
+        {headerComponent
+          ? (
+              <div className={"flex justify-between items-center"}>
+                {headerComponent}
+                <SheetPrimitive.Close
+                  className={cn(
+                    "flex items-center justify-center ring-offset-background focus:ring-ring data-[state=open]:bg-navy  rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none",
+                  )}
+                >
+                  <XIcon className="size-6 text-navy" />
+                  <span className="sr-only">Close</span>
+                </SheetPrimitive.Close>
+              </div>
+            )
+          : (
+              <SheetPrimitive.Close
+                className={cn(
+                  "ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none",
+                )}
+              >
+                <XIcon className="size-4" />
+                <span className="sr-only">Close</span>
+              </SheetPrimitive.Close>
+            )}
         {children}
-        <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none">
-          <XIcon className="size-4" />
-          <span className="sr-only">Close</span>
-        </SheetPrimitive.Close>
       </SheetPrimitive.Content>
     </SheetPortal>
   );
