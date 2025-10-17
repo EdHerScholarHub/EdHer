@@ -26,3 +26,12 @@ export const SearchFormSchema = z
   });
 
 export type FTSearchFormSchema = z.infer<typeof SearchFormSchema>;
+
+export const contactSchema = z.object({
+  name: z.string().nonempty("Name is required!"),
+  email: z.email({ error: iss => !iss.input ? "Email is required!" : "Invalid Email" }),
+  phone: z.string().nonempty("Phone Number is required!").regex(/^\+?\(?\d{3}\)?[-\s.]?\d{3}[-\s.]?\d{4,6}$/, "Invalid Phone Number"),
+  message: z.string().nonempty("Message is required!").min(8, "at least 8 chars").max(1024, "maximum 1024 chars"),
+});
+
+export type FTContactSchema = z.infer<typeof contactSchema>;

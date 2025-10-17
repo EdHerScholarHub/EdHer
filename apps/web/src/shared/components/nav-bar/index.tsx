@@ -8,7 +8,7 @@ export default function NavBar() {
     <nav className=" bg-navy w-full top-0 sticky z-10">
       <div className="flex justify-between p-4 max-w-[1440px] h-[68px] w-full mx-auto">
         <div className="">
-          <Link href="/en/home" className="text-xl font-black text-background">
+          <Link href="/home" className="text-xl font-black text-background">
             <EdHer />
           </Link>
         </div>

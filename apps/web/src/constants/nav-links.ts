@@ -1,5 +1,5 @@
 export const navMenuLinks = [
-  { text: "Home", link: "#" },
+  { text: "Home", link: "/home" },
   {
     text: "Scholarships",
     link: "#",
@@ -21,5 +21,5 @@ export const navMenuLinks = [
   // },
   // { text: "Community", link: "#" },
   // { text: "Events", link: "#" },
-  { text: "About Us", link: "#" },
+  { text: "About Us", link: "/about-us" },
 ];

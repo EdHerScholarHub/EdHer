@@ -17,6 +17,7 @@ import LocaleSelect from "../locale-select";
 
 export default function DesktopNav() {
   const route = usePathname();
+  const isActiveRoute = (link: string) => route.includes(link);
   return (
     <NavigationMenu viewport={false}>
       <NavigationMenuList className="[&_button]:text-silver [&_button]:bg-navy [&_svg]:size-5">
@@ -26,7 +27,7 @@ export default function DesktopNav() {
             menu.subMenu
               ? (
                   <NavigationMenuItem key={menu.text}>
-                    <NavigationMenuTrigger className={`hover:!bg-transparent focus-within:!bg-transparent data-[state=open]:!bg-transparent data-[state=open]:!text-silver ${route.includes(menu.text.toLowerCase()) ? "!text-silver" : "!text-silver/60 hover:!text-silver"}`}>
+                    <NavigationMenuTrigger className={`hover:!bg-transparent focus-within:!bg-transparent data-[state=open]:!bg-transparent data-[state=open]:!text-silver ${isActiveRoute(menu.link) ? "!text-silver" : "!text-silver/60 hover:!text-silver"}`}>
                       {menu.text}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="!bg-silver">
@@ -48,10 +49,10 @@ export default function DesktopNav() {
                 )
               : (
                   <NavigationMenuItem key={menu.text}>
-                    <Button variant="default" className={`hover:bg-transparent group relative ${route.includes(menu.text.toLowerCase()) ? "!text-silver" : "!text-silver/60 hover:!text-silver"}`}>
+                    <Button variant="default" className={`hover:bg-transparent shadow-none group relative ${isActiveRoute(menu.link) ? "!text-silver" : "!text-silver/60 hover:!text-silver"}`}>
                       <Link href={menu.link}>{menu.text}</Link>
 
-                      { route.includes(menu.text.toLowerCase()) && <span className="w-[90%] h-0.5 bg-silver absolute bottom-0" />}
+                      { isActiveRoute(menu.link) && <span className="w-[90%] h-0.5 bg-silver absolute bottom-0" />}
                     </Button>
                   </NavigationMenuItem>
                 )
