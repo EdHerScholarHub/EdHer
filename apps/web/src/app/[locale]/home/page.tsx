@@ -41,7 +41,7 @@ export default async function IndexPage() {
 
         <section className="">
           <Header
-            header="Edher's Choice"
+            header="EdHer's Choice"
             desc="Handpicked scholarships and resources selected for you by our team."
             link="#"
           />

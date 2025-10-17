@@ -1,0 +1,31 @@
+<svg width="1440" height="398" viewBox="0 0 1440 398" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <path d="M161.5 258.371C29.5 208.8 -53.8333 237.717 -79 258.371V436H1450V306.322C1381.83 285.657 1202.4 238.13 1030 213.344C814.5 182.363 731.5 242.674 596 311.66C460.5 380.646 326.5 320.335 161.5 258.371Z" fill="#17316A" fill-opacity="0.2"/>
+    <path d="M209.101 284.166C51.4499 379.775 -64.6543 324.003 -103 284.166V436H1444V2.03721C1101.89 -30.0109 937.336 326.721 735.771 323.044C534.206 319.366 406.165 164.655 209.101 284.166Z" fill="#17316A" fill-opacity="0.2"/>
+    <path d="M249 291.439C91.4 382.429 -24.6667 329.352 -63 291.439V435.939H1483.5V22.9388C1141.5 -7.5612 977 331.939 775.5 328.439C574 324.939 446 177.701 249 291.439Z" fill="#17316A" fill-opacity="0.2"/>
+  </g>
+
+  <!-- Background Overlay Opacity -->
+  <rect x="0" y="0" width="1440" height="398" fill="#00000044" />
+
+  <g>
+    <circle cx="250" cy="100" r="8" stroke="#8997B5" stroke-width="1.5"/>
+    <circle cx="1200" cy="300" r="8" stroke="#8997B5" stroke-width="1.5"/>
+
+    <circle cx="310" cy="220" r="8" stroke="#F8F5F1" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="4 4"/>
+    <circle cx="280" cy="310" r="8" stroke="#F8F5F1" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="8 8"/>
+    <circle cx="1150" cy="50" r="8" stroke="#F8F5F1" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="4 4"/>
+
+
+    <g>
+      <circle cx="513" cy="23" r="8" fill="white" />
+      <circle cx="510" cy="20" r="8" stroke="#8997B5" stroke-width="1.5"/>
+    </g>
+
+    <g>
+      <circle cx="923" cy="323" r="8" fill="white" />
+      <circle cx="920" cy="320" r="8" stroke="#8997B5" stroke-width="1.5"/>
+    </g>
+
+  </g>  
+</svg>
