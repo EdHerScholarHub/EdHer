@@ -11,6 +11,7 @@ export const scholarDetail = pgTable(
     id: text("id")
       .notNull()
       .$defaultFn(() => createId()),
+    name: text("name").notNull(),
     lang: LANG_ENUM("lang").notNull(),
     country: text("country").notNull(),
     provider: text("provider").notNull(),
