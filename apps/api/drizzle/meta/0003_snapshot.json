@@ -1,0 +1,135 @@
+{
+  "id": "77bd2ad3-90ed-4924-b28a-e13bb42d4a55",
+  "prevId": "bbf60961-66ee-4ad1-a281-669216936b08",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.scholar_detail": {
+      "name": "scholar_detail",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lang": {
+          "name": "lang",
+          "type": "lang_enum",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "country": {
+          "name": "country",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "provider": {
+          "name": "provider",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "study_level": {
+          "name": "study_level",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "deadline": {
+          "name": "deadline",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "benefits": {
+          "name": "benefits",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "requirements": {
+          "name": "requirements",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "necessary_documents": {
+          "name": "necessary_documents",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "guidelines": {
+          "name": "guidelines",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "footer": {
+          "name": "footer",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "official_link": {
+          "name": "official_link",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "additional_link": {
+          "name": "additional_link",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "scholar_detail_id_lang_pk": {
+          "name": "scholar_detail_id_lang_pk",
+          "columns": [
+            "id",
+            "lang"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {
+    "public.lang_enum": {
+      "name": "lang_enum",
+      "schema": "public",
+      "values": [
+        "en",
+        "mm",
+        "my"
+      ]
+    }
+  },
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

@@ -1,0 +1,1 @@
+ALTER TABLE "scholar_detail" ADD COLUMN "name" text NOT NULL;
