@@ -78,7 +78,7 @@ export default function Team() {
 function MemberCard({ name, position, img }: TTeamMember) {
   return (
     <div className="text-navy mx-auto w-fit overflow-hidden">
-      <Image src={img} width={300} height={300} alt={name} className="rounded-md mb-2" />
+      <Image src={img} width={300} height={300} alt={name} className=" rounded-md mb-2" />
       <p className="font-medium">{name}</p>
       <p className="text-sm">{position}</p>
     </div>
