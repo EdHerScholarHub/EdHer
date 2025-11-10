@@ -1,19 +1,15 @@
-import { Button } from "@repo/ui/components/button";
-import { House } from "lucide-react";
+"use client";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale } from "next-intl/server";
 import Image from "next/image";
 
 import Footer from "../components/home/footer";
-import { Link } from "../i18n/navigation";
 import NavBar from "../shared/components/nav-bar";
 
-const RootNotFound = async () => {
-  const locale = await getLocale();
+const GlobalError = () => {
   return (
     <html>
       <body>
-        <NextIntlClientProvider locale={locale}>
+        <NextIntlClientProvider locale={"en"}>
           <div className={"h-svh w-svw md:h-screen md:w-screen flex flex-col"}>
             <NavBar />
             <section
@@ -22,32 +18,27 @@ const RootNotFound = async () => {
               }
             >
               <Image
-                src={"/assets/not-found.svg"}
+                src={"/assets/error.svg"}
                 alt={"Not Found"}
                 width={300}
                 height={300}
               />
               <div className={"text-center"}>
-                <h2 className={"mb-4 font-bold text-2xl text-navy"}>
-                  Page Not Found!
+                <h2
+                  className={
+                    "flex flex-col gap-y-2 mb-4 font-bold text-2xl text-navy"
+                  }
+                >
+                  <span>OOPS!</span>
+                  <span>Something went wrong.</span>
                 </h2>
                 <p
                   className={
                     "max-w-[600px] mb-4 text-muted-navy font-normal md:text-[18px]"
                   }
                 >
-                  Oops! The page you’re looking for doesn’t exist or has been
-                  moved. Please check the URL or return to the homepage.
+                  Please refresh page to continue.
                 </p>
-                <Button
-                  asChild={true}
-                  className={"bg-navy text-white font-bold "}
-                >
-                  <Link href={"/home"} locale={locale}>
-                    <House />
-                    <span>Back to homepage</span>
-                  </Link>
-                </Button>
               </div>
             </section>
             <Footer />
@@ -58,4 +49,4 @@ const RootNotFound = async () => {
   );
 };
 
-export default RootNotFound;
+export default GlobalError;

@@ -13,6 +13,7 @@
     "@hookform/resolvers": "^5.2.2",
     "@next/third-parties": "^15.5.3",
     "@repo/ui": "workspace:*",
+    "@repo/api": "workspace:*",
     "lucide-react": "^0.475.0",
     "next": "15.5.0",
     "next-intl": "^4.3.7",
