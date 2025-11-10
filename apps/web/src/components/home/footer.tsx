@@ -32,7 +32,7 @@ export default function Footer() {
 
       </footer>
       <div className="text-center bg-[#092257] py-3 text-sm basis-full text-silver/70 border-t border-silver/20">
-        <p className="">Copyright&copy;2025 Edher</p>
+        <p className="">Copyright&copy;2025 EdHer</p>
       </div>
     </section>
   );

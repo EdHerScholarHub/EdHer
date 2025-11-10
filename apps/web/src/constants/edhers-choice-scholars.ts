@@ -1,6 +1,6 @@
 import type { TScholar } from "./popular-scholars";
 
-export const edhersScholars: TScholar[] = [
+export const EDHERSSCHOLARS: TScholar[] = [
   {
     id: 0,
     img: "/assets/post5.png",

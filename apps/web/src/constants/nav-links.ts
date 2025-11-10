@@ -1,4 +1,4 @@
-export const navMenuLinks = [
+export const NAVMENULINKS = [
   { text: "Home", link: "/home" },
   {
     text: "Scholarships",
@@ -20,6 +20,7 @@ export const navMenuLinks = [
   //   ],
   // },
   // { text: "Community", link: "#" },
-  // { text: "Events", link: "#" },
   { text: "About Us", link: "/about-us" },
+  { text: "Get Involve", link: "/get-involve" },
+  { text: "Contact Us", link: "/contact-us" },
 ];

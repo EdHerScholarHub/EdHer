@@ -1,7 +1,7 @@
 import { Laptop2, Palette } from "lucide-react";
 import Image from "next/image";
 
-export const categories = [
+export const CATEGORIES = [
   { title: "Business", desc: "120 Scholarships", icon: <Image src="/icons/suitcase.svg" alt="philosophy icon" width={40} height={40} /> },
   { title: "Computer Science", desc: "120 Scholarships", icon: <Laptop2 /> },
   { title: "Arts", desc: "120 Scholarships", icon: <Palette /> },

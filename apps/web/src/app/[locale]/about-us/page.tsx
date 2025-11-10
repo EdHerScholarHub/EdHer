@@ -6,7 +6,7 @@ import Team from "../../../components/about-us/team";
 
 export default function AboutUsPage() {
   return (
-    <main>
+    <main className="bg-silver">
       <section
         style={{ backgroundImage: "url('/assets/overlay.svg'), url('/assets/about-us-bg.jpg')" }}
         className="cursor-default overflow-hidden bg-cover bg-center h-[240px] md:h-[480px] lg:h-[598px] relative grid place-items-center"

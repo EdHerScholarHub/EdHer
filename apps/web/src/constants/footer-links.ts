@@ -3,7 +3,7 @@ type TFooterLink = {
   link: string;
 };
 
-export const footerLinks: Array<Record<string, Array<TFooterLink>>> = [
+export const FOOTERLINKS: Array<Record<string, Array<TFooterLink>>> = [
   // {
   //   Shortcuts: [
   //     { text: "Guides & Articles", link: "#" },

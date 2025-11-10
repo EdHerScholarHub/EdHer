@@ -9,7 +9,7 @@ export type TScholar = {
   tags: string[];
   link: string;
 };
-export const popularScholars: TScholar[] = [
+export const POPULARSCHOLARS: TScholar[] = [
   {
     id: 0,
     img: "/assets/post1.png",

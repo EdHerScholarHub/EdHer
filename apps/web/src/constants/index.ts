@@ -1,11 +1,7 @@
-import { categories } from "./categories";
-import { edhersScholars } from "./edhers-choice-scholars";
-import { footerLinks } from "./footer-links";
-import { navMenuLinks } from "./nav-links";
-import { popularScholars } from "./popular-scholars";
-
-export const FOOTERLINKS = footerLinks;
-export const NAVMENULINKS = navMenuLinks;
-export const POPULARSCHOLARS = popularScholars;
-export const EDHERSSCHOLARS = edhersScholars;
-export const CATEGORIES = categories;
+export * from "./categories";
+export * from "./edhers-choice-scholars";
+export * from "./footer-links";
+export * from "./nav-links";
+export * from "./popular-scholars";
+export * from "./volunteer-position";
+//
