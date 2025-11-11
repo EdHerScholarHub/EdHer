@@ -1,6 +1,5 @@
 import type { InferSelectModel } from "drizzle-orm";
 
-import { createId } from "@paralleldrive/cuid2";
 import { date, pgTable, primaryKey, text } from "drizzle-orm/pg-core";
 
 import { LANG_ENUM } from "./enum";
@@ -8,9 +7,7 @@ import { LANG_ENUM } from "./enum";
 export const scholarDetail = pgTable(
   "scholar_detail",
   {
-    id: text("id")
-      .notNull()
-      .$defaultFn(() => createId()),
+    id: text("id").notNull(),
     name: text("name").notNull(),
     lang: LANG_ENUM("lang").notNull(),
     country: text("country").notNull(),
