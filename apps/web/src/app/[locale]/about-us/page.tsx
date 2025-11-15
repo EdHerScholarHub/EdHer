@@ -43,7 +43,7 @@ export default function AboutUsPage() {
           <Impact />
         </div>
 
-        <div>
+        <div id={"team"}>
           <h1 className="header">Meet The Team</h1>
           <Team />
         </div>

@@ -1,6 +1,8 @@
 import { GraduationCap, Lightbulb } from "lucide-react";
 import Image from "next/image";
 
+import { Link } from "../../i18n/navigation";
+
 export default function Hero() {
   return (
     <main className="cursor-default bg-[url('/assets/bg.svg')] bg-cover bg-bottom min-h-[calc(100dvh-70px)] md:min-h-[700px] lg:min-h-[600px] max-h-[720px]">
@@ -16,22 +18,22 @@ export default function Hero() {
             global opportunities designed for ASEAN youth.
           </p>
           <div className={"flex flex-col gap-4 md:flex-row"}>
-            <button
+            <Link
+              href={"/search"}
               className="bg-papaya hover:brightness-110 active:brightness-110 transition cursor-pointer w-max md:text-lg px-4 py-4 lg:py-3 flex items-center gap-x-2 text-navy rounded-sm font-medium"
               type="button"
               role="button"
             >
               <GraduationCap />
               <span>Explore Scholarships</span>
-            </button>
-            <button
+            </Link>
+            <Link
+              href={"/get-involve"}
               className=" bg-transparent border-[1px] border-papaya hover:bg-papaya/70 hover:border-transparent hover:text-navy/90 transition cursor-pointer w-max md:text-lg px-4 py-4 lg:py-3 flex items-center gap-x-2 text-white rounded-sm font-medium duration-500"
-              type="button"
-              role="button"
             >
               <Lightbulb />
               <span>Join Our Network</span>
-            </button>
+            </Link>
           </div>
         </div>
 
