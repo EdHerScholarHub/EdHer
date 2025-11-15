@@ -29,12 +29,6 @@ export const list: Array<Partial<Record<TTeamName, Array<TTeamMember>>>> = [
         img: "/assets/profiles/ctl_2.jpg",
       },
       {
-        id: 3,
-        name: "Soe Thiha Lwin",
-        position: "Web Developer",
-        img: "/assets/profiles/soe_thiha_lwin.jpg",
-      },
-      {
         id: 4,
         name: "Kyi Phyu Khin",
         position: "UI/UX Designer",

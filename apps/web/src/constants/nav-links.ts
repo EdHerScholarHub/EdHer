@@ -1,25 +1,5 @@
 export const NAVMENULINKS = [
   { text: "Home", link: "/home" },
-  {
-    text: "Scholarships",
-    link: "#",
-    subMenu: [
-      { text: "Scholarship-1", link: "#" },
-      { text: "Scholarship-2", link: "#" },
-      { text: "Scholarship-3", link: "#" },
-      { text: "Scholarship-4", link: "#" },
-    ],
-  },
-  // {
-  //   text: "Resources",
-  //   link: "#",
-  //   subMenu: [
-  //     { text: "Resource-1", link: "#" },
-  //     { text: "Resource-2", link: "#" },
-  //     { text: "Resource-3", link: "#" },
-  //   ],
-  // },
-  // { text: "Community", link: "#" },
   { text: "About Us", link: "/about-us" },
   { text: "Get Involve", link: "/get-involve" },
   { text: "Contact Us", link: "/contact-us" },
