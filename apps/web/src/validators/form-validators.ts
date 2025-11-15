@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod/v3";
 
 import { VOLUNTEERPOSITION } from "../constants";
 
@@ -17,12 +17,9 @@ export const SearchFormSchema = z
       && !val.fieldOfStudy
     ) {
       ctx.addIssue({
-        code: "invalid_format",
-        minimum: 1,
-        origin: "string",
+        code: "custom",
+        path: ["fieldOfStudy"],
         message: "Input must be present",
-        input: val.name,
-        format: "includes",
       });
     }
   });
@@ -31,9 +28,7 @@ export type FTSearchFormSchema = z.infer<typeof SearchFormSchema>;
 
 export const contactSchema = z.object({
   name: z.string().min(1, { message: "Name is required!" }),
-  email: z
-    .email()
-    .min(1, { message: "Email is required!" }),
+  email: z.string().email({ message: "Email is required!" }),
   phone: z
     .string()
     .min(1, { message: "Phone Number is required!" })
@@ -50,16 +45,14 @@ export type FTContactSchema = z.infer<typeof contactSchema>;
 
 export const joinVolunteerSchema = z.object({
   name: z.string().min(1, { message: "Name is required!" }),
-  email: z
-    .email()
-    .min(1, { message: "Email is required!" }),
+  email: z.string().email({ message: "Email is required!" }),
   phone: z
     .string()
     .min(1, { message: "Phone Number is required!" })
     .regex(/^\+?\(?\d{3}\)?[-\s.]?\d{3}[-\s.]?\d{4,6}$/, {
       message: "Invalid Phone Number",
     }),
-  position: z.enum(VOLUNTEERPOSITION, { error: "Choose a position" }),
+  position: z.enum(VOLUNTEERPOSITION, { message: "Choose a position" }),
   message: z
     .string()
     .min(8, { message: "At least 8 characters" })

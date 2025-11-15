@@ -113,7 +113,6 @@ export const list: Array<Partial<Record<TTeamName, Array<TTeamMember>>>> = [
         img: "/assets/profiles/min_khant_maung.jpg",
       },
     ],
-
   },
   {
     "Malaysia Team": [
