@@ -1,0 +1,43 @@
+export const Post = {
+  id: "Stipendium Hungaricum Scholarship 2026 in Hungary",
+  country: "Hungary",
+  provider: "Hungarian Government",
+  study_level: "Bachelor, Masters, Doctoral",
+  image: "/assets/post1.png",
+  deadline: "15 January 2026, 2pm. CET",
+  desc: "Here's coming, We would like to share information about the fully funded scholarship offered by the Government of Hungary. ✨🎉",
+  benefits: [
+    "✅ Full coverage of tuition fees. ",
+    "✅ Monthly Stipend",
+    "For Bachelor's and Master's degrees: Approx. HUF 43,700/month (~EUR 100-110).",
+    "For Doctoral level: HUF 140,000/month for the first 4 semesters; HUF 180,000/month for the second 4 semesters. ",
+    "✅ Accommodation in a dormitory or a contribution of HUF 40,000/month. ",
+    "✅ Includes health insurance and supplementary medical insurance.",
+  ],
+  requirements: [
+    "Must be a citizen of a Sending Partner country that has an educational cooperation agreement with Hungary. ",
+    "Must meet the academic and language requirements of the chosen study program. ",
+    "Must be nominated by the responsible Sending Partner authority in your home country.",
+  ],
+  necessary_documents: [
+    "Motivation Letter",
+    "Proof of language proficiency (IELTS, TOEFL, etc.)",
+    "Academic Transcripts and Degree Certificates",
+    "Medical Certificate",
+    "Copy of Passport",
+    "Research Plan (for PhD applicants)",
+    "Letters of Recommendation (for PhD applicants)",
+  ],
+  guidelines: [
+    "Check if your country is a Sending Partner and if your desired study program is eligible.",
+    "Read the relevant Call for Applications carefully.",
+    "Gather all the necessary documents.",
+    "Register on the online application system (DreamApply), choose up to two study programs, and upload your documents.",
+    "Submit your application before the deadline. ",
+  ],
+  footer: "After submitting the application, the Sending Partner will conduct the nomination process, and universities will hold entrance examinations.For more detailed information about this scholarship, you can visit the following link: ",
+  official_link: "https://stipendiumhungaricum.hu/",
+  additional_link: [
+    "https://scholarshipunion.com/stipendium-hungarian-scholarship-2026-in-hungary/",
+  ],
+};
